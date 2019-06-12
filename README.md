@@ -1,5 +1,5 @@
-# Beginning-iOS-12-Programming-with-Swift
-Beginning iOS 12 Programming with Swift
+# Beginning iOS 12 Programming with Swift
+
 
 Preface
 - [x] Chapter 1 - The Development Tools, the Learning Approach, and the App Idea
