@@ -7,9 +7,9 @@ Preface
 - [x] Chapter 3 - Hello World! Build Your First App in Swift
 - [x] Chapter 4 - Hello World App Explained
 - [x] Chapter 5 - Introduction to Auto Layout
-- [ ] Chapter 6 - Designing UI Using Stack Views
-- [ ] Chapter 7 - Introduction to Prototyping
-- [ ] Chapter 8 - Creating a Simple Table-based App
+- [x] Chapter 6 - Designing UI Using Stack Views
+- [x] Chapter 7 - Introduction to Prototyping
+- [x] Chapter 8 - Creating a Simple Table-based App
 - [ ] Chapter 9 - Customize Table Views Using Prototype Cell
 - [ ] Chapter 10 - Interacting with Table View and Using UIAlertController
 - [ ] Chapter 11 - Table Row Deletion, Custom Action Button and MVC
