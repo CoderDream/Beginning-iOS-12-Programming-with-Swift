@@ -31,11 +31,11 @@
                                                 <constraint firstAttribute="height" constant="250" id="deO-Ey-wfu"/>
                                             </constraints>
                                         </imageView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="208" translatesAutoresizingMaskIntoConstraints="NO" id="zv1-sH-xFu">
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="zv1-sH-xFu">
                                             <rect key="frame" x="24" y="265" width="327" height="43"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ylF-MS-hyY">
-                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="43"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="268" height="43"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pX-Re-Gm3">
                                                             <rect key="frame" x="0.0" y="0.0" width="47" height="20.5"/>
