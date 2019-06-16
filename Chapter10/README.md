@@ -16,3 +16,10 @@ override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: Inde
 
 - Displaying an action sheet(snapshot)             
 ![](snapshot/100101.jpg)  
+
+
+### ActionSheet (left) and Alert (right)
+
+Referring to the code snippet in the previous section, you can specify the style of the UIAlertController object through the *preferredStyle* parameter. You can either set its value to *.actionSheet* or *.alert* .
+(preferredStyle两种不同的风格）
+![](snapshot/100102.jpg) 
