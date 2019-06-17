@@ -99,30 +99,32 @@ class RestaurantTableViewController: UITableViewController {
         // Check-in action
         let checkInAction = UIAlertAction(title: checkActionTitle, style: .default, handler: {
             (action:UIAlertAction!) -> Void in
+            let cell = tableView.cellForRow(at: indexPath)
+            self.restaurantIsVisited[indexPath.row] = (self.restaurantIsVisited[indexPath.row]) ? false : true
             // Solution to exercise #1
             // ---
             // Toggle the accessoryType and the value of restaurantIsVisited[indexPath.row]
             // If the value of self.restaurantIsVisited[indexPath.row] is true, we set the accessory type to .none.
 //            let cell = tableView.cellForRow(at: indexPath)
 //            self.restaurantIsVisited[indexPath.row] = (self.restaurantIsVisited[indexPath.row]) ? false : true
-//            cell?.accessoryType = (self.restaurantIsVisited[indexPath.row]) ? .none : .checkmark
+            cell?.accessoryType = (self.restaurantIsVisited[indexPath.row]) ? .checkmark : .none
             
             
-            let cell = tableView.cellForRow(at: indexPath)
-            cell?.accessoryType = .checkmark
-            self.restaurantIsVisited[indexPath.row] = true
+            //let cell = tableView.cellForRow(at: indexPath)
+            //cell?.accessoryType = .checkmark
+            //self.restaurantIsVisited[indexPath.row] = true
         })
         optionMenu.addAction(checkInAction)
         
         // Display the menu
         present(optionMenu, animated: true, completion: nil)
         
-        if let popoverController = optionMenu.popoverPresentationController {
-            if let cell = tableView.cellForRow(at: indexPath) {
-                popoverController.sourceView = cell
-                popoverController.sourceRect = cell.bounds
-            }
-        }
+//        if let popoverController = optionMenu.popoverPresentationController {
+//            if let cell = tableView.cellForRow(at: indexPath) {
+//                popoverController.sourceView = cell
+//                popoverController.sourceRect = cell.bounds
+//            }
+//        }
         
         // Deselect the row
         //tableView.deselectRow(at: indexPath, animated: false)
