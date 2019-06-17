@@ -165,6 +165,45 @@ class RestaurantTableViewController: UITableViewController {
             print(name)
         }
     }
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") {
+            (action, sourceView, completionHandler) in
+            // Delete the row from the data source
+            self.restaurantNames.remove(at: indexPath.row)
+            self.restaurantLocations.remove(at: indexPath.row)
+            self.restaurantTypes.remove(at: indexPath.row)
+            self.restaurantIsVisited.remove(at: indexPath.row)
+            self.restaurantImages.remove(at: indexPath.row)
+            
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            // Call completion handler to dismiss the action before
+            completionHandler(true)
+        }
+        
+        let shareAction = UIContextualAction(style: .destructive, title: "Share") {
+            (action, sourceView, completionHandler) in
+            let defaultText = "Just checking in at " + self.restaurantNames[indexPath.row]
+            //let activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
+            let activityController: UIActivityViewController
+            if let imageToShare = UIImage(named: self.restaurantNames[indexPath.row]) {
+                activityController = UIActivityViewController(activityItems: [defaultText, imageToShare], applicationActivities: nil)
+                print("Share text with image")
+            } else {
+                activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
+            }
+            
+            self.present(activityController, animated: true, completion: nil)
+            
+            // Call completion handler to dismiss the action before
+            completionHandler(true)
+        }
+        
+        let swipeConfiguration = UISwipeActionsConfiguration(actions: [deleteAction, shareAction])
+        
+        return swipeConfiguration
+    }
   
 
     /*
