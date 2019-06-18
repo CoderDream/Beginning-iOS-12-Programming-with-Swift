@@ -20,6 +20,8 @@
 		3F69268122B78E9100C93BF9 /* RestaurantDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F69268022B78E9100C93BF9 /* RestaurantDetailHeaderView.swift */; };
 		3F69268322B887CA00C93BF9 /* RestaurantDetailIconTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F69268222B887CA00C93BF9 /* RestaurantDetailIconTextCell.swift */; };
 		3F69268522B8894800C93BF9 /* RestaurantDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F69268422B8894800C93BF9 /* RestaurantDetailTextCell.swift */; };
+		3FCD6F7E22B928C900433B5C /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCD6F7D22B928C900433B5C /* UIColor+Ext.swift */; };
+		3FCD6F8022B92BA200433B5C /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCD6F7F22B92BA200433B5C /* UINavigationController+Ext.swift */; };
 		F44705AE211AF99E002E0327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44705AD211AF99E002E0327 /* AppDelegate.swift */; };
 		F44705B3211AF99E002E0327 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44705B1211AF99E002E0327 /* Main.storyboard */; };
 		F44705B5211AF99F002E0327 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F44705B4211AF99F002E0327 /* Assets.xcassets */; };
@@ -44,6 +46,8 @@
 		3F69268022B78E9100C93BF9 /* RestaurantDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailHeaderView.swift; sourceTree = "<group>"; };
 		3F69268222B887CA00C93BF9 /* RestaurantDetailIconTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailIconTextCell.swift; sourceTree = "<group>"; };
 		3F69268422B8894800C93BF9 /* RestaurantDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailTextCell.swift; sourceTree = "<group>"; };
+		3FCD6F7D22B928C900433B5C /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		3FCD6F7F22B92BA200433B5C /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
 		F44705AA211AF99E002E0327 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44705AD211AF99E002E0327 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F44705B2211AF99E002E0327 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,6 +96,15 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		3FCD6F7C22B928A800433B5C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3FCD6F7D22B928C900433B5C /* UIColor+Ext.swift */,
+				3FCD6F7F22B92BA200433B5C /* UINavigationController+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		F44705A1211AF99D002E0327 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +124,7 @@
 		F44705AC211AF99E002E0327 /* FoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				3FCD6F7C22B928A800433B5C /* Extensions */,
 				3F69266A22B7884800C93BF9 /* Resources */,
 				F481ACB4212345BB00B6DC2F /* Storyboard */,
 				F481ACB5212345CE00B6DC2F /* Model */,
@@ -247,6 +261,8 @@
 				F44705C0211AFFE1002E0327 /* RestaurantTableViewController.swift in Sources */,
 				F463DF78211D35A600F73F88 /* RestaurantTableViewCell.swift in Sources */,
 				3F69268322B887CA00C93BF9 /* RestaurantDetailIconTextCell.swift in Sources */,
+				3FCD6F8022B92BA200433B5C /* UINavigationController+Ext.swift in Sources */,
+				3FCD6F7E22B928C900433B5C /* UIColor+Ext.swift in Sources */,
 				F481ACB0212188AD00B6DC2F /* RestaurantDetailViewController.swift in Sources */,
 				F44705AE211AF99E002E0327 /* AppDelegate.swift in Sources */,
 			);
