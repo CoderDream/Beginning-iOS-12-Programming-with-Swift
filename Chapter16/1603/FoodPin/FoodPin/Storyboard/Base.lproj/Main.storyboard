@@ -126,7 +126,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3T-Dg-vZC" userLabel="Name Label">
-                                            <rect key="frame" x="14" y="271" width="91.5" height="42"/>
+                                            <rect key="frame" x="14" y="272" width="86" height="41"/>
                                             <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="35"/>
                                             <color key="textColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -299,7 +299,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="mapView" destination="kJg-vz-sqb" id="3bn-SL-h0S"/>
-                                            <segue destination="CNj-Of-Zoh" kind="show" identifier="showMap" id="I7G-Uw-xC9"/>
+                                            <segue destination="jYK-SK-plU" kind="show" identifier="showMap" id="Hmx-5Y-9dQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -325,33 +325,33 @@
             <point key="canvasLocation" x="1813.5999999999999" y="150.67466266866569"/>
         </scene>
         <!--Map View Controller-->
-        <scene sceneID="Aga-hL-D28">
+        <scene sceneID="elS-7X-xS4">
             <objects>
-                <viewController id="CNj-Of-Zoh" customClass="MapViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="G0D-SQ-Tb8">
+                <viewController id="jYK-SK-plU" customClass="MapViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ytx-rQ-flR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vlA-Tv-NAo">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LoB-bK-j3I">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="sGG-9s-58e" firstAttribute="trailing" secondItem="vlA-Tv-NAo" secondAttribute="trailing" id="BqK-0A-A46"/>
-                            <constraint firstItem="vlA-Tv-NAo" firstAttribute="top" secondItem="sGG-9s-58e" secondAttribute="top" id="KuQ-Ne-0jF"/>
-                            <constraint firstItem="sGG-9s-58e" firstAttribute="bottom" secondItem="vlA-Tv-NAo" secondAttribute="bottom" id="ZEe-2I-mhL"/>
-                            <constraint firstItem="vlA-Tv-NAo" firstAttribute="leading" secondItem="sGG-9s-58e" secondAttribute="leading" id="stY-A6-Isx"/>
+                            <constraint firstItem="LoB-bK-j3I" firstAttribute="trailing" secondItem="doY-VS-9kf" secondAttribute="trailing" id="1PP-FT-EZi"/>
+                            <constraint firstItem="LoB-bK-j3I" firstAttribute="bottom" secondItem="doY-VS-9kf" secondAttribute="bottom" id="Gbq-BH-zg0"/>
+                            <constraint firstItem="LoB-bK-j3I" firstAttribute="leading" secondItem="doY-VS-9kf" secondAttribute="leading" id="KuV-gY-f7h"/>
+                            <constraint firstItem="LoB-bK-j3I" firstAttribute="top" secondItem="Ytx-rQ-flR" secondAttribute="top" id="TPP-qI-drY"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="sGG-9s-58e"/>
+                        <viewLayoutGuide key="safeArea" id="doY-VS-9kf"/>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="vlA-Tv-NAo" id="Hdc-dB-Qzt"/>
+                        <outlet property="mapView" destination="LoB-bK-j3I" id="3n6-RQ-idt"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FJ2-lj-EeZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z80-ce-02W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2513" y="84"/>
+            <point key="canvasLocation" x="2564" y="147.97601199400302"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cmZ-La-i97">
