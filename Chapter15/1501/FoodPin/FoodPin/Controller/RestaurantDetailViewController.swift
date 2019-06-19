@@ -15,6 +15,8 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     
     var restaurant = Restaurant()
     
+    // MARK: - View controller life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,24 +44,20 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         //tableView.contentInsetAdjustmentBehavior = .never
         
         // Customize the navigation bar
-        navigationController?.navigationBar.backgroundColor = .gray
+        //navigationController?.navigationBar.backgroundColor = .gray
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.tintColor = .white
-        // navigationController?.hidesBarsOnSwipe = true
+        navigationController?.hidesBarsOnSwipe = false
         
         tableView.contentInsetAdjustmentBehavior = .never
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+        super.viewWillAppear(animated)
         
         navigationController?.hidesBarsOnSwipe = false
-        navigationController?.setToolbarHidden(false, animated: true)
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
     /*
@@ -109,5 +107,9 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         default:
             fatalError("Failed to instantiate the table view cell for detail view controller")
         }
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
