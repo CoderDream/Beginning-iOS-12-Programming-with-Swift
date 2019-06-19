@@ -111,9 +111,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0cZ-9U-jrR">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0cZ-9U-jrR">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="AnH-l0-WZc" userLabel="Header View" customClass="RestaurantDetailHeaderView" customModule="FoodPin" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
@@ -157,15 +156,15 @@
                                         <constraint firstItem="7Vi-JQ-nPD" firstAttribute="top" secondItem="J3T-Dg-vZC" secondAttribute="bottom" constant="3" id="6Qb-Rs-Ydl"/>
                                         <constraint firstItem="YDg-oM-Bsa" firstAttribute="top" secondItem="AnH-l0-WZc" secondAttribute="top" id="7kw-io-QYP"/>
                                         <constraint firstItem="YDg-oM-Bsa" firstAttribute="leading" secondItem="AnH-l0-WZc" secondAttribute="leading" id="9nU-w9-2q5"/>
-                                        <constraint firstAttribute="trailing" secondItem="93a-Wt-vOo" secondAttribute="trailing" id="BoM-Oi-Tzv"/>
                                         <constraint firstItem="7Vi-JQ-nPD" firstAttribute="leading" secondItem="AnH-l0-WZc" secondAttribute="leading" constant="14" id="CXi-28-mJ6"/>
+                                        <constraint firstAttribute="bottom" secondItem="93a-Wt-vOo" secondAttribute="bottom" id="Rj6-U5-dQt"/>
+                                        <constraint firstItem="93a-Wt-vOo" firstAttribute="top" secondItem="AnH-l0-WZc" secondAttribute="top" id="Ro2-jQ-wmA"/>
                                         <constraint firstItem="93a-Wt-vOo" firstAttribute="leading" secondItem="AnH-l0-WZc" secondAttribute="leading" id="UDZ-bz-dwz"/>
+                                        <constraint firstAttribute="trailing" secondItem="93a-Wt-vOo" secondAttribute="trailing" id="VIv-IX-UgB"/>
                                         <constraint firstItem="anj-2u-JQw" firstAttribute="leading" secondItem="7Vi-JQ-nPD" secondAttribute="trailing" constant="8" id="XI8-a1-5Cc"/>
                                         <constraint firstAttribute="bottom" secondItem="YDg-oM-Bsa" secondAttribute="bottom" id="YWQ-Ka-WyM"/>
-                                        <constraint firstItem="93a-Wt-vOo" firstAttribute="top" secondItem="AnH-l0-WZc" secondAttribute="top" id="Zck-nB-N90"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="J3T-Dg-vZC" secondAttribute="trailing" constant="50" id="cFu-cw-vqf"/>
                                         <constraint firstAttribute="bottom" secondItem="7Vi-JQ-nPD" secondAttribute="bottom" constant="14" id="eIN-sB-daC"/>
-                                        <constraint firstAttribute="bottom" secondItem="93a-Wt-vOo" secondAttribute="bottom" id="re8-NA-37v"/>
                                         <constraint firstAttribute="trailing" secondItem="YDg-oM-Bsa" secondAttribute="trailing" id="x8D-aQ-Rb8"/>
                                         <constraint firstItem="J3T-Dg-vZC" firstAttribute="leading" secondItem="7Vi-JQ-nPD" secondAttribute="leading" id="xOf-xp-vP3"/>
                                     </constraints>
@@ -244,6 +243,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0cZ-9U-jrR" firstAttribute="trailing" secondItem="aXW-Kr-gi3" secondAttribute="trailing" id="3gG-6q-WDi"/>
+                            <constraint firstItem="0cZ-9U-jrR" firstAttribute="leading" secondItem="aXW-Kr-gi3" secondAttribute="leading" id="gGh-oD-6Tz"/>
+                            <constraint firstItem="0cZ-9U-jrR" firstAttribute="top" secondItem="Edt-og-S5F" secondAttribute="top" id="pwl-42-wdz"/>
+                            <constraint firstItem="0cZ-9U-jrR" firstAttribute="bottom" secondItem="aXW-Kr-gi3" secondAttribute="bottom" id="tQz-wt-P9h"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aXW-Kr-gi3"/>
                     </view>
                     <connections>
