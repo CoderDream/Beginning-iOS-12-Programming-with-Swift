@@ -1,0 +1,90 @@
+/* Class = "UILabel"; text = "TYPE"; ObjectID = "4Wh-dV-cFc"; */
+"4Wh-dV-cFc.text" = "ART";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "7Vi-JQ-nPD"; */
+"7Vi-JQ-nPD.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Cool"; ObjectID = "9Na-OL-VqB"; */
+"9Na-OL-VqB.normalTitle" = "Cool";
+
+/* Class = "UILabel"; text = "Type"; ObjectID = "aaM-3S-454"; */
+"aaM-3S-454.text" = "Art";
+
+/* Class = "UILabel"; text = "DESCRIPTION"; ObjectID = "aGp-km-0VT"; */
+"aGp-km-0VT.text" = "BESCHREIBUNG";
+
+/* Class = "UILabel"; text = "PHONE"; ObjectID = "b0H-9D-ZB4"; */
+"b0H-9D-ZB4.text" = "PHONE";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "bUx-ED-v6k"; */
+"bUx-ED-v6k.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Sad"; ObjectID = "Cde-HV-Nzg"; */
+"Cde-HV-Nzg.normalTitle" = "Sad";
+
+/* Class = "UITextField"; placeholder = "Fill in the restaurant name"; ObjectID = "cZW-Am-3Vf"; */
+"cZW-Am-3Vf.placeholder" = "Füllen Sie den Namen aus";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "dHI-Ro-LfK"; */
+"dHI-Ro-LfK.text" = "Name";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "dlz-BV-izD"; */
+"dlz-BV-izD.title" = "Item";
+
+/* Class = "UIButton"; normalTitle = "Rate it"; ObjectID = "f5M-TF-2fe"; */
+"f5M-TF-2fe.normalTitle" = "Bewerte es";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "GfT-ce-Ajp"; */
+"GfT-ce-Ajp.text" = "Adresse";
+
+/* Class = "UINavigationItem"; title = "New Restaurant"; ObjectID = "gsJ-0s-eOn"; */
+"gsJ-0s-eOn.title" = "Neues Restaurant";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "gtg-iA-h4F"; */
+"gtg-iA-h4F.title" = "Item";
+
+/* Class = "UITextField"; placeholder = "Fill in the restaurant address"; ObjectID = "gZu-xG-PX2"; */
+"gZu-xG-PX2.placeholder" = "Füllen Sie die Adresse aus";
+
+/* Class = "UILabel"; text = "Subsection Title"; ObjectID = "Hip-7Q-SpJ"; */
+"Hip-7Q-SpJ.text" = "Subsection Title";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "J3T-Dg-vZC"; */
+"J3T-Dg-vZC.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "mKy-71-piq"; */
+"mKy-71-piq.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Fill in the restaurant type"; ObjectID = "mm0-xq-FNb"; */
+"mm0-xq-FNb.placeholder" = "Füllen Sie den Typ aus";
+
+/* Class = "UILabel"; text = "ADDRESS"; ObjectID = "nYW-SC-7Vp"; */
+"nYW-SC-7Vp.text" = "ADRESSE";
+
+/* Class = "UINavigationItem"; title = "FoodPin"; ObjectID = "P4T-aW-PpF"; */
+"P4T-aW-PpF.title" = "FoodPin";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "Pqd-w5-mUO"; */
+"Pqd-w5-mUO.title" = " ";
+
+/* Class = "UILabel"; text = "NAME"; ObjectID = "TCP-T2-i2k"; */
+"TCP-T2-i2k.text" = "NAME";
+
+/* Class = "UITextField"; placeholder = "Fill in the restaurant phone"; ObjectID = "Uh6-3c-SgX"; */
+"Uh6-3c-SgX.placeholder" = "Fülle das Telefon aus";
+
+/* Class = "UITextView"; text = "A great restaurant to try out"; ObjectID = "V1I-V4-VL4"; */
+"V1I-V4-VL4.text" = "Ein tolles Restaurant";
+
+/* Class = "UIButton"; normalTitle = "Angry"; ObjectID = "xUE-EO-pZ4"; */
+"xUE-EO-pZ4.normalTitle" = "Angry";
+
+/* Class = "UIButton"; normalTitle = "Love"; ObjectID = "XWs-Vd-Ift"; */
+"XWs-Vd-Ift.normalTitle" = "Love";
+
+/* Class = "UIButton"; normalTitle = "Happy"; ObjectID = "ZLJ-Zj-dhn"; */
+"ZLJ-Zj-dhn.normalTitle" = "Happy";
+
+/* Class = "UITabBarItem"; title = "Favorites"; ObjectID = "Zp0-gg-F2D"; */
+"Zp0-gg-F2D.title" = "Favoriten";
+

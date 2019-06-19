@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="FoodPin/en.lproj/InfoPlist.strings" datatype="plaintext" source-language="en" target-language="zh-Hant">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="10.0" build-num="10L232m"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+        <note>Bundle name</note>
+      </trans-unit>
+      <trans-unit id="NSCameraUsageDescription">
+        <source>You need to grant the app access to your camera in order to take photos.</source>
+        <target>您需要授予應用程序使用您的相機才能拍攝照片。</target>
+        <note>Privacy - Camera Usage Description</note>
+      </trans-unit>
+      <trans-unit id="NSPhotoLibraryUsageDescription">
+        <source>You need to grant the app access to your photo library so you can pick your favorite restaurant photo.</source>
+        <target>您需要授予應用程序進入圖片庫才可選擇照片。</target>
+        <note>Privacy - Photo Library Usage Description</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="FoodPin/en.lproj/Localizable.strings" datatype="plaintext" source-language="en" target-language="zh-Hant">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="10.0" build-num="10L232m"/>
+    </header>
+    <body>
+      <trans-unit id="CREATE YOUR OWN FOOD GUIDE">
+        <source>CREATE YOUR OWN FOOD GUIDE</source>
+        <target>創建熟於你自己的飲食指南</target>
+        <note>CREATE YOUR OWN FOOD GUIDE</note>
+      </trans-unit>
+      <trans-unit id="Camera">
+        <source>Camera</source>
+        <target>相機</target>
+        <note>Camera</note>
+      </trans-unit>
+      <trans-unit id="Check-in">
+        <source>Check-in</source>
+        <target>報到</target>
+        <note>Check-in</note>
+      </trans-unit>
+      <trans-unit id="Choose your photo source">
+        <source>Choose your photo source</source>
+        <target>選擇相片來源</target>
+        <note>Choose your photo source</note>
+      </trans-unit>
+      <trans-unit id="DISCOVER GREAT RESTAURANTS">
+        <source>DISCOVER GREAT RESTAURANTS</source>
+        <target>發現更多值得拜訪的餐廳</target>
+        <note>DISCOVER GREAT RESTAURANTS</note>
+      </trans-unit>
+      <trans-unit id="Delete">
+        <source>Delete</source>
+        <target>删除</target>
+        <note>Delete</note>
+      </trans-unit>
+      <trans-unit id="Facebook">
+        <source>Facebook</source>
+        <target>臉書</target>
+        <note>Facebook</note>
+      </trans-unit>
+      <trans-unit id="Feedback">
+        <source>Feedback</source>
+        <target>提供意見</target>
+        <note>Feedback</note>
+      </trans-unit>
+      <trans-unit id="Find restaurants shared by your friends and other foodies">
+        <source>Find restaurants shared by your friends and other foodies</source>
+        <target>查找由您的朋友和其他美食家分享的餐館廳</target>
+        <note>Find restaurants shared by your friends and other foodies</note>
+      </trans-unit>
+      <trans-unit id="Follow Us">
+        <source>Follow Us</source>
+        <target>追蹤我們</target>
+        <note>Follow Us</note>
+      </trans-unit>
+      <trans-unit id="Instagram">
+        <source>Instagram</source>
+        <note>Instagram</note>
+      </trans-unit>
+      <trans-unit id="Just checking in at ">
+        <source>Just checking in at </source>
+        <note>Just checking in at</note>
+      </trans-unit>
+      <trans-unit id="Photo library">
+        <source>Photo library</source>
+        <target>圖片庫</target>
+        <note>Photo library</note>
+      </trans-unit>
+      <trans-unit id="Pin your favorite restaurants and create your own food guide">
+        <source>Pin your favorite restaurants and create your own food guide</source>
+        <target>紀錄你最喜歡的餐館，並創建自己的飲食指南</target>
+        <note>Pin your favorite restaurants and create your own food guide</note>
+      </trans-unit>
+      <trans-unit id="Rate us on App Store">
+        <source>Rate us on App Store</source>
+        <target>給我們評價</target>
+        <note>Rate us on App Store</note>
+      </trans-unit>
+      <trans-unit id="SHOW YOU THE LOCATION">
+        <source>SHOW YOU THE LOCATION</source>
+        <target>顯示餐廳的位置</target>
+        <note>SHOW YOU THE LOCATION</note>
+      </trans-unit>
+      <trans-unit id="Search and locate your favourite restaurant on Maps">
+        <source>Search and locate your favourite restaurant on Maps</source>
+        <target>在地圖上搜索並找到您最喜歡的餐館</target>
+        <note>Search and locate your favourite restaurant on Maps</note>
+      </trans-unit>
+      <trans-unit id="Search restaurants...">
+        <source>Search restaurants...</source>
+        <target>搜尋餐廳...</target>
+        <note>Search restaurants...</note>
+      </trans-unit>
+      <trans-unit id="Share">
+        <source>Share</source>
+        <target>分享</target>
+        <note>Share</note>
+      </trans-unit>
+      <trans-unit id="Tell us your feedback">
+        <source>Tell us your feedback</source>
+        <target>有意見！歡迎與我們聯絡</target>
+        <note>Tell us your feedback</note>
+      </trans-unit>
+      <trans-unit id="Twitter">
+        <source>Twitter</source>
+        <target>推特</target>
+        <note>Twitter</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="FoodPin/Storyboard/Base.lproj/Main.storyboard" source-language="en" datatype="plaintext" target-language="zh-Hant">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="10.0" build-num="10L232m"/>
+    </header>
+    <body>
+      <trans-unit id="4Wh-dV-cFc.text">
+        <source>TYPE</source>
+        <target>類型</target>
+        <note>Class = "UILabel"; text = "TYPE"; ObjectID = "4Wh-dV-cFc";</note>
+      </trans-unit>
+      <trans-unit id="7Vi-JQ-nPD.text">
+        <source>Label</source>
+        <target>Label</target>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "7Vi-JQ-nPD";</note>
+      </trans-unit>
+      <trans-unit id="9Na-OL-VqB.normalTitle">
+        <source>Cool</source>
+        <target>Cool</target>
+        <note>Class = "UIButton"; normalTitle = "Cool"; ObjectID = "9Na-OL-VqB";</note>
+      </trans-unit>
+      <trans-unit id="Cde-HV-Nzg.normalTitle">
+        <source>Sad</source>
+        <target>Sad</target>
+        <note>Class = "UIButton"; normalTitle = "Sad"; ObjectID = "Cde-HV-Nzg";</note>
+      </trans-unit>
+      <trans-unit id="GfT-ce-Ajp.text">
+        <source>Location</source>
+        <target>地址</target>
+        <note>Class = "UILabel"; text = "Location"; ObjectID = "GfT-ce-Ajp";</note>
+      </trans-unit>
+      <trans-unit id="Hip-7Q-SpJ.text">
+        <source>Subsection Title</source>
+        <target>Subsection Title</target>
+        <note>Class = "UILabel"; text = "Subsection Title"; ObjectID = "Hip-7Q-SpJ";</note>
+      </trans-unit>
+      <trans-unit id="J3T-Dg-vZC.text">
+        <source>Label</source>
+        <target>Label</target>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "J3T-Dg-vZC";</note>
+      </trans-unit>
+      <trans-unit id="P4T-aW-PpF.title">
+        <source>FoodPin</source>
+        <target>FoodPin</target>
+        <note>Class = "UINavigationItem"; title = "FoodPin"; ObjectID = "P4T-aW-PpF";</note>
+      </trans-unit>
+      <trans-unit id="Pqd-w5-mUO.title">
+        <source> </source>
+        <target> </target>
+        <note>Class = "UIBarButtonItem"; title = " "; ObjectID = "Pqd-w5-mUO";</note>
+      </trans-unit>
+      <trans-unit id="TCP-T2-i2k.text">
+        <source>NAME</source>
+        <target>餐廳名</target>
+        <note>Class = "UILabel"; text = "NAME"; ObjectID = "TCP-T2-i2k";</note>
+      </trans-unit>
+      <trans-unit id="Uh6-3c-SgX.placeholder">
+        <source>Fill in the restaurant phone</source>
+        <target>填寫餐廳電話</target>
+        <note>Class = "UITextField"; placeholder = "Fill in the restaurant phone"; ObjectID = "Uh6-3c-SgX";</note>
+      </trans-unit>
+      <trans-unit id="V1I-V4-VL4.text">
+        <source>A great restaurant to try out</source>
+        <target>非常棒的餐廳!不可錯過</target>
+        <note>Class = "UITextView"; text = "A great restaurant to try out"; ObjectID = "V1I-V4-VL4";</note>
+      </trans-unit>
+      <trans-unit id="XWs-Vd-Ift.normalTitle">
+        <source>Love</source>
+        <target>Love</target>
+        <note>Class = "UIButton"; normalTitle = "Love"; ObjectID = "XWs-Vd-Ift";</note>
+      </trans-unit>
+      <trans-unit id="ZLJ-Zj-dhn.normalTitle">
+        <source>Happy</source>
+        <target>Happy</target>
+        <note>Class = "UIButton"; normalTitle = "Happy"; ObjectID = "ZLJ-Zj-dhn";</note>
+      </trans-unit>
+      <trans-unit id="Zp0-gg-F2D.title">
+        <source>Favorites</source>
+        <target>不可不試</target>
+        <note>Class = "UITabBarItem"; title = "Favorites"; ObjectID = "Zp0-gg-F2D";</note>
+      </trans-unit>
+      <trans-unit id="aGp-km-0VT.text">
+        <source>DESCRIPTION</source>
+        <target>簡介</target>
+        <note>Class = "UILabel"; text = "DESCRIPTION"; ObjectID = "aGp-km-0VT";</note>
+      </trans-unit>
+      <trans-unit id="aaM-3S-454.text">
+        <source>Type</source>
+        <target>類別</target>
+        <note>Class = "UILabel"; text = "Type"; ObjectID = "aaM-3S-454";</note>
+      </trans-unit>
+      <trans-unit id="b0H-9D-ZB4.text">
+        <source>PHONE</source>
+        <target>電話號碼</target>
+        <note>Class = "UILabel"; text = "PHONE"; ObjectID = "b0H-9D-ZB4";</note>
+      </trans-unit>
+      <trans-unit id="bUx-ED-v6k.text">
+        <source>Label</source>
+        <target>Label</target>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "bUx-ED-v6k";</note>
+      </trans-unit>
+      <trans-unit id="cZW-Am-3Vf.placeholder">
+        <source>Fill in the restaurant name</source>
+        <target>填寫餐廳名</target>
+        <note>Class = "UITextField"; placeholder = "Fill in the restaurant name"; ObjectID = "cZW-Am-3Vf";</note>
+      </trans-unit>
+      <trans-unit id="dHI-Ro-LfK.text">
+        <source>Name</source>
+        <target>餐廳名</target>
+        <note>Class = "UILabel"; text = "Name"; ObjectID = "dHI-Ro-LfK";</note>
+      </trans-unit>
+      <trans-unit id="dlz-BV-izD.title">
+        <source>Item</source>
+        <target>Item</target>
+        <note>Class = "UITabBarItem"; title = "Item"; ObjectID = "dlz-BV-izD";</note>
+      </trans-unit>
+      <trans-unit id="f5M-TF-2fe.normalTitle">
+        <source>Rate it</source>
+        <target>給餐廳評價</target>
+        <note>Class = "UIButton"; normalTitle = "Rate it"; ObjectID = "f5M-TF-2fe";</note>
+      </trans-unit>
+      <trans-unit id="gZu-xG-PX2.placeholder">
+        <source>Fill in the restaurant address</source>
+        <target>填寫餐廳地址</target>
+        <note>Class = "UITextField"; placeholder = "Fill in the restaurant address"; ObjectID = "gZu-xG-PX2";</note>
+      </trans-unit>
+      <trans-unit id="gsJ-0s-eOn.title">
+        <source>New Restaurant</source>
+        <target>新增餐廳</target>
+        <note>Class = "UINavigationItem"; title = "New Restaurant"; ObjectID = "gsJ-0s-eOn";</note>
+      </trans-unit>
+      <trans-unit id="gtg-iA-h4F.title">
+        <source>Item</source>
+        <target>Item</target>
+        <note>Class = "UITabBarItem"; title = "Item"; ObjectID = "gtg-iA-h4F";</note>
+      </trans-unit>
+      <trans-unit id="mKy-71-piq.text">
+        <source>Label</source>
+        <target>Label</target>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "mKy-71-piq";</note>
+      </trans-unit>
+      <trans-unit id="mm0-xq-FNb.placeholder">
+        <source>Fill in the restaurant type</source>
+        <target>填寫餐廳類別</target>
+        <note>Class = "UITextField"; placeholder = "Fill in the restaurant type"; ObjectID = "mm0-xq-FNb";</note>
+      </trans-unit>
+      <trans-unit id="nYW-SC-7Vp.text">
+        <source>ADDRESS</source>
+        <target>地址</target>
+        <note>Class = "UILabel"; text = "ADDRESS"; ObjectID = "nYW-SC-7Vp";</note>
+      </trans-unit>
+      <trans-unit id="xUE-EO-pZ4.normalTitle">
+        <source>Angry</source>
+        <target>Angry</target>
+        <note>Class = "UIButton"; normalTitle = "Angry"; ObjectID = "xUE-EO-pZ4";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="FoodPin/Storyboard/FoodPin/Storyboard/Base.lproj/About.storyboard" source-language="en" datatype="plaintext" target-language="zh-Hant">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="10.0" build-num="10L232m"/>
+    </header>
+    <body>
+      <trans-unit id="BdK-ZV-YF1.title">
+        <source>About</source>
+        <target>關於 FoodPin</target>
+        <note>Class = "UINavigationItem"; title = "About"; ObjectID = "BdK-ZV-YF1";</note>
+      </trans-unit>
+      <trans-unit id="P83-iE-fFb.text">
+        <source>Title</source>
+        <target>Title</target>
+        <note>Class = "UILabel"; text = "Title"; ObjectID = "P83-iE-fFb";</note>
+      </trans-unit>
+      <trans-unit id="ich-wF-b6m.title">
+        <source>About</source>
+        <target>關於</target>
+        <note>Class = "UITabBarItem"; title = "About"; ObjectID = "ich-wF-b6m";</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

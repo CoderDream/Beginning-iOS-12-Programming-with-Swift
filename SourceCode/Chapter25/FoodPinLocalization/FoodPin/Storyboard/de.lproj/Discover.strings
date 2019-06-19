@@ -1,0 +1,21 @@
+
+/* Class = "UITabBarItem"; title = "Discover"; ObjectID = "A2G-Bh-OuY"; */
+"A2G-Bh-OuY.title" = "Discover";
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "JbA-Nd-p7c"; */
+"JbA-Nd-p7c.text" = "Phone";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "LzJ-H2-hDz"; */
+"LzJ-H2-hDz.text" = "Name";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "V6Z-To-XRy"; */
+"V6Z-To-XRy.text" = "Description";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "dxC-XI-go0"; */
+"dxC-XI-go0.text" = "Address";
+
+/* Class = "UILabel"; text = "type"; ObjectID = "fUR-nN-k6b"; */
+"fUR-nN-k6b.text" = "type";
+
+/* Class = "UINavigationItem"; title = "Discover"; ObjectID = "xhW-cV-Qbr"; */
+"xhW-cV-Qbr.title" = "Discover";

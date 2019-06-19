@@ -1,0 +1,6 @@
+/* Privacy - Camera Usage Description */
+"NSCameraUsageDescription" = "Sie müssen der App Zugriff auf Ihre Kamera gewähren, um Fotos aufzunehmen.";
+
+/* Privacy - Photo Library Usage Description */
+"NSPhotoLibraryUsageDescription" = "Sie müssen der App Zugriff auf Ihre Fotobibliothek gewähren, damit Sie Ihr Lieblingsrestaurantfoto auswählen können.";
+
