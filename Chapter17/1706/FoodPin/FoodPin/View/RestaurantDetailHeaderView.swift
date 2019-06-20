@@ -28,4 +28,6 @@ class RestaurantDetailHeaderView: UIView {
             heartImageView.tintColor = .white
         }
     }
+        
+    @IBOutlet var ratingImageView: UIImageView!
 }

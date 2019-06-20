@@ -106,18 +106,8 @@ class ReviewViewController: UIViewController {
             self.rateButtons[4].alpha = 1.0
             self.rateButtons[4].transform = .identity
         }, completion: nil)
-        
-        
-       
-        
-        
-        
     }
     
-    @IBAction func close(segue: UIStoryboardSegue) {
-        dismiss(animated: true, completion: nil)
-    }
-
     /*
     // MARK: - Navigation
 

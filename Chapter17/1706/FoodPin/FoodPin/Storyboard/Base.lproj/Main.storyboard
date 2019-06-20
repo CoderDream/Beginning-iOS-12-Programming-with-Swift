@@ -184,6 +184,7 @@
                                         <outlet property="headerImageView" destination="YDg-oM-Bsa" id="Z6g-vg-GQ0"/>
                                         <outlet property="heartImageView" destination="anj-2u-JQw" id="AtM-GT-L9T"/>
                                         <outlet property="nameLabel" destination="J3T-Dg-vZC" id="c47-oF-MgR"/>
+                                        <outlet property="ratingImageView" destination="CVf-QU-MFV" id="9ea-bW-jeD"/>
                                         <outlet property="typeLabel" destination="7Vi-JQ-nPD" id="zxQ-QY-8g5"/>
                                     </connections>
                                 </view>
@@ -412,6 +413,7 @@
                                 <state key="normal" image="cross"/>
                                 <connections>
                                     <action selector="closeWithSegue:" destination="gMC-hC-5uQ" eventType="touchUpInside" id="6cJ-rL-9Rk"/>
+                                    <segue destination="EpR-qe-l20" kind="unwind" unwindAction="closeWithSegue:" id="55x-RL-Ula"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="y4i-Hf-ST0">
@@ -421,26 +423,41 @@
                                         <rect key="frame" x="0.0" y="0.0" width="188" height="82"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Love" image="love"/>
+                                        <connections>
+                                            <segue destination="EpR-qe-l20" kind="unwind" identifier="love" unwindAction="rateRestaurantWithSegue:" id="13U-Qt-doH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pp3-E9-zrm">
                                         <rect key="frame" x="0.0" y="92" width="181" height="83"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Cool" image="cool"/>
+                                        <connections>
+                                            <segue destination="EpR-qe-l20" kind="unwind" identifier="cool" unwindAction="rateRestaurantWithSegue:" id="7yV-Vz-yxY"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAZ-rG-L6a">
                                         <rect key="frame" x="0.0" y="185" width="227" height="86"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Happy" image="happy"/>
+                                        <connections>
+                                            <segue destination="EpR-qe-l20" kind="unwind" identifier="happy" unwindAction="rateRestaurantWithSegue:" id="4E2-bU-2fK"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vB2-sa-FBs">
                                         <rect key="frame" x="0.0" y="281" width="167" height="87"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Sad" image="sad"/>
+                                        <connections>
+                                            <segue destination="EpR-qe-l20" kind="unwind" identifier="sad" unwindAction="rateRestaurantWithSegue:" id="6a8-hE-7eK"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEo-uc-7Vc">
                                         <rect key="frame" x="0.0" y="378" width="218" height="103"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Angry" image="angry"/>
+                                        <connections>
+                                            <segue destination="EpR-qe-l20" kind="unwind" identifier="angry" unwindAction="rateRestaurantWithSegue:" id="nNO-Uh-vu0"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -469,6 +486,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wUp-W5-uCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="EpR-qe-l20" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2554.4000000000001" y="647.22638680659679"/>
         </scene>
