@@ -78,3 +78,17 @@ func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 - 实现效果
 在每个输入框输入文字点击【换行】后，进入下一个控件      
 ![](snapshot/180302.png)  
+
+
+You need to grant the app access to your photo library so you can pick your favorite restaurant photo.
+
+Privacy - Photo Library Usage Description" for the key andset the value to:You need to grant the app access to your photo library so you can pick your favorite restaurant photo.Repeat the same procedure and add another row. Set the key to "Privacy - Camera Usage Description" and the value to:You need to grant the app access to your camera in order to take photos.
+
+
+
+- 去掉表格之间的分割线
+```
+// Configure table view
+tableView.separatorStyle = .none
+```
+        
