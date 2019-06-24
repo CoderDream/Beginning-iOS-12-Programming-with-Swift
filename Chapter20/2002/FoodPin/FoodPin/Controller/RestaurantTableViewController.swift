@@ -35,7 +35,8 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         if let customFont = UIFont(name: "Rubik-Medium", size: 40.0) {
-            navigationController?.navigationBar.largeTitleTextAttributes = [ NSAttributedString.Key.foregroundColor: UIColor(red: 231, green: 76, blue: 60), NSAttributedString.Key.font: customFont ]
+            navigationController?.navigationBar.largeTitleTextAttributes = [ NSAttributedString.Key.foregroundColor: UIColor(red: 231, green: 76, blue: 60),
+                                                                             NSAttributedString.Key.font: customFont ]
         }
         navigationController?.hidesBarsOnSwipe = true
         
@@ -78,6 +79,8 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         // Replace the follown line of code with the one above
         // if you want to put the search bar in the navigation bar
         tableView.tableHeaderView = searchController.searchBar
+        
+         self.definesPresentationContext = true
     }
     
     override func viewWillAppear(_ animated: Bool) {

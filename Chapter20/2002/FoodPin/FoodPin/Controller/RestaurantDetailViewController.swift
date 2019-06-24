@@ -58,6 +58,9 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         navigationController?.hidesBarsOnSwipe = false
         
         tableView.contentInsetAdjustmentBehavior = .never
+        
+        //tableView.tableHeaderView = nil
+        //self.navigationItem.searchController = nil
     }
     
     override func viewWillAppear(_ animated: Bool) {
