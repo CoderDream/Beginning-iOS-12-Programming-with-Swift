@@ -12,3 +12,11 @@
 libc++abi.dylib: terminating with uncaught exception of type NSException
 
 ```
+
+
+- [UISearchController使用总结](https://blog.csdn.net/u011656331/article/details/84669634)
+
+```
+// ***这行代码非常重要，一定要加上***
+self.definesPresentationContext = true
+```
