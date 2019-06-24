@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F025D8922C0F87F00193229 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F025D8822C0F87F00193229 /* WalkthroughContentViewController.swift */; };
+		3F025D8B22C0FAD400193229 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F025D8A22C0FAD400193229 /* WalkthroughPageViewController.swift */; };
+		3F025D8D22C0FE3400193229 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F025D8C22C0FE3400193229 /* WalkthroughViewController.swift */; };
 		3F25E96322C0CF35009B188F /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F25E96222C0CF35009B188F /* Onboarding.storyboard */; };
 		3F43C07D22BF1AC700968170 /* NewRestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43C07C22BF1AC700968170 /* NewRestaurantController.swift */; };
 		3F43C0A122BF97A600968170 /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F43C09F22BF97A600968170 /* FoodPin.xcdatamodeld */; };
@@ -42,6 +45,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F025D8822C0F87F00193229 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
+		3F025D8A22C0FAD400193229 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		3F025D8C22C0FE3400193229 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
 		3F25E96222C0CF35009B188F /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		3F43C07C22BF1AC700968170 /* NewRestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurantController.swift; sourceTree = "<group>"; };
 		3F43C0A022BF97A600968170 /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
@@ -174,6 +180,9 @@
 				3F528A2022BA40C300B33088 /* MapViewController.swift */,
 				3F44FE1922BB755C00736B9E /* ReviewViewController.swift */,
 				3F43C07C22BF1AC700968170 /* NewRestaurantController.swift */,
+				3F025D8822C0F87F00193229 /* WalkthroughContentViewController.swift */,
+				3F025D8A22C0FAD400193229 /* WalkthroughPageViewController.swift */,
+				3F025D8C22C0FE3400193229 /* WalkthroughViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -306,14 +315,17 @@
 				F463DF78211D35A600F73F88 /* RestaurantTableViewCell.swift in Sources */,
 				3F43C0A122BF97A600968170 /* FoodPin.xcdatamodeld in Sources */,
 				3F528A2122BA40C300B33088 /* MapViewController.swift in Sources */,
+				3F025D8D22C0FE3400193229 /* WalkthroughViewController.swift in Sources */,
 				3F69268322B887CA00C93BF9 /* RestaurantDetailIconTextCell.swift in Sources */,
 				3FCD6F8022B92BA200433B5C /* UINavigationController+Ext.swift in Sources */,
 				3FCD6F7E22B928C900433B5C /* UIColor+Ext.swift in Sources */,
 				F481ACB0212188AD00B6DC2F /* RestaurantDetailViewController.swift in Sources */,
 				3F69268A22BA2CE100C93BF9 /* RestaurantDetailSeparatorCell.swift in Sources */,
 				3FFEC2DB22BE77740089ACD2 /* RoundedTextField.swift in Sources */,
+				3F025D8922C0F87F00193229 /* WalkthroughContentViewController.swift in Sources */,
 				F44705AE211AF99E002E0327 /* AppDelegate.swift in Sources */,
 				3F43C07D22BF1AC700968170 /* NewRestaurantController.swift in Sources */,
+				3F025D8B22C0FAD400193229 /* WalkthroughPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
