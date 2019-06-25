@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F25E96E22C1FD3E009B188F /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F25E96D22C1FD3E009B188F /* Rubik-MediumItalic.ttf */; };
 		F41267552135566F0037EBFC /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F41267542135566F0037EBFC /* Onboarding.storyboard */; };
 		F4126757213684B90037EBFC /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4126756213684B90037EBFC /* WalkthroughContentViewController.swift */; };
 		F4126759213689170037EBFC /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4126758213689170037EBFC /* WalkthroughPageViewController.swift */; };
@@ -35,7 +36,6 @@
 		F4CDB81B2123F00400FF388A /* RestaurantDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CDB81A2123F00400FF388A /* RestaurantDetailHeaderView.swift */; };
 		F4CDB81D21242D7200FF388A /* RestaurantDetailIconTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CDB81C21242D7200FF388A /* RestaurantDetailIconTextCell.swift */; };
 		F4CDB81F2124447D00FF388A /* RestaurantDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CDB81E2124447D00FF388A /* RestaurantDetailTextCell.swift */; };
-		F4FD17622127D9FD0067EA4A /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4FD17612127D9FD0067EA4A /* Rubik-MediumItalic.ttf */; };
 		F4FD17652127E0E00067EA4A /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD17642127E0E00067EA4A /* UIColor+Ext.swift */; };
 		F4FD17672127E3E30067EA4A /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD17662127E3E30067EA4A /* UINavigationController+Ext.swift */; };
 		F4FD176A21291DEA0067EA4A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4FD176921291DEA0067EA4A /* MapKit.framework */; };
@@ -49,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F25E96D22C1FD3E009B188F /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Rubik-MediumItalic.ttf"; path = "../../../../../../../../../Desktop/Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
 		F41267542135566F0037EBFC /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		F4126756213684B90037EBFC /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
 		F4126758213689170037EBFC /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
@@ -79,7 +80,6 @@
 		F4CDB81A2123F00400FF388A /* RestaurantDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailHeaderView.swift; sourceTree = "<group>"; };
 		F4CDB81C21242D7200FF388A /* RestaurantDetailIconTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailIconTextCell.swift; sourceTree = "<group>"; };
 		F4CDB81E2124447D00FF388A /* RestaurantDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailTextCell.swift; sourceTree = "<group>"; };
-		F4FD17612127D9FD0067EA4A /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Rubik-MediumItalic.ttf"; path = "../../../../../../../../../Library/Fonts/Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
 		F4FD17642127E0E00067EA4A /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		F4FD17662127E3E30067EA4A /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
 		F4FD176921291DEA0067EA4A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -204,11 +204,11 @@
 				F4CDB8072123CF3500FF388A /* Rubik-BlackItalic.ttf */,
 				F4CDB80D2123CF3700FF388A /* Rubik-Bold.ttf */,
 				F4CDB80B2123CF3700FF388A /* Rubik-BoldItalic.ttf */,
+				3F25E96D22C1FD3E009B188F /* Rubik-MediumItalic.ttf */,
 				F4CDB8062123CF3500FF388A /* Rubik-Italic.ttf */,
 				F4CDB80A2123CF3600FF388A /* Rubik-Light.ttf */,
 				F4CDB8092123CF3600FF388A /* Rubik-LightItalic.ttf */,
 				F4CDB80F2123CF3800FF388A /* Rubik-Medium.ttf */,
-				F4FD17612127D9FD0067EA4A /* Rubik-MediumItalic.ttf */,
 				F4CDB80E2123CF3800FF388A /* Rubik-Regular.ttf */,
 			);
 			path = Fonts;
@@ -298,6 +298,7 @@
 				F4CDB8172123CF3800FF388A /* Rubik-Bold.ttf in Resources */,
 				F4CDB8182123CF3800FF388A /* Rubik-Regular.ttf in Resources */,
 				F4CDB8122123CF3800FF388A /* Rubik-Black.ttf in Resources */,
+				3F25E96E22C1FD3E009B188F /* Rubik-MediumItalic.ttf in Resources */,
 				F4CDB8112123CF3800FF388A /* Rubik-BlackItalic.ttf in Resources */,
 				F4CDB8132123CF3800FF388A /* Rubik-LightItalic.ttf in Resources */,
 				F4CDB8102123CF3800FF388A /* Rubik-Italic.ttf in Resources */,
@@ -305,7 +306,6 @@
 				F4CDB8142123CF3800FF388A /* Rubik-Light.ttf in Resources */,
 				F44705B5211AF99F002E0327 /* Assets.xcassets in Resources */,
 				F460D40F213935D300C2F6FE /* Discover.storyboard in Resources */,
-				F4FD17622127D9FD0067EA4A /* Rubik-MediumItalic.ttf in Resources */,
 				F4CDB8192123CF3800FF388A /* Rubik-Medium.ttf in Resources */,
 				F460D40D2139352900C2F6FE /* About.storyboard in Resources */,
 				F41267552135566F0037EBFC /* Onboarding.storyboard in Resources */,
@@ -497,14 +497,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6GP5VW643M;
 				INFOPLIST_FILE = FoodPin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.FoodPin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coderdream126.FoodPin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -514,14 +515,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6GP5VW643M;
 				INFOPLIST_FILE = FoodPin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.FoodPin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.coderdream126.FoodPin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
