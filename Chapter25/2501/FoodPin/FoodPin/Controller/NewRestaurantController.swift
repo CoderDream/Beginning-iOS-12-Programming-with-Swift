@@ -74,10 +74,10 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // 如果选择的第一个 Cell
         if indexPath.row == 0 {
-            // 创建警告控制器
-            let photoSourceRequestController = UIAlertController(title: "", message: "Choose your photo source", preferredStyle: .actionSheet)
-            // 相机警告
-            let cameraAction = UIAlertAction(title: "Camera", style: .default, handler: { (action) in
+            
+            let photoSourceRequestController = UIAlertController(title: "", message: NSLocalizedString("Choose your photo source", comment: "Choose your photo source"), preferredStyle: .actionSheet)
+            
+            let cameraAction = UIAlertAction(title: NSLocalizedString("Camera", comment: "Camera"), style: .default, handler: { (action) in
                 if UIImagePickerController.isSourceTypeAvailable(.camera) {
                     let imagePicker = UIImagePickerController()
                     imagePicker.allowsEditing = false
@@ -87,8 +87,8 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
                     self.present(imagePicker, animated: true, completion: nil)
                 }
             })
-            // 相片库警告
-            let photoLibraryAction = UIAlertAction(title: "Photo library", style: .default, handler: { (action) in
+            
+            let photoLibraryAction = UIAlertAction(title: NSLocalizedString("Photo library", comment: "Photo library"), style: .default, handler: { (action) in
                 if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
                     let imagePicker = UIImagePickerController()
                     imagePicker.allowsEditing = false
