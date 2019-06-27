@@ -1,0 +1,9 @@
+/* Class = "UITabBarItem"; title = "About"; ObjectID = "s8V-n7-xua"; */
+"s8V-n7-xua.title" = "关于";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "UOK-fA-8w8"; */
+"UOK-fA-8w8.text" = "标题";
+
+/* Class = "UINavigationItem"; title = "About"; ObjectID = "wrO-KD-WyF"; */
+"wrO-KD-WyF.title" = "关于";
+
