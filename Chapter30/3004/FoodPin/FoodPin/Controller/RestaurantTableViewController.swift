@@ -410,9 +410,9 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         }        
         
         // 设置请求标识符
-        let requestIdentifier = "foodpin.restaurantSuggestion3"
+        let requestIdentifier = "foodpin.restaurantSuggestion31"
         // 设置通知触发器
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 30, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
         // 设置一个通知请求
         let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
         
