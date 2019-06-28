@@ -1,0 +1,9 @@
+/* Bundle display name */
+"CFBundleDisplayName" = "美食汇";
+
+/* Privacy - Camera Usage Description */
+"NSCameraUsageDescription" = "请授权访问相机";
+
+/* Privacy - Photo Library Usage Description */
+"NSPhotoLibraryUsageDescription" = "请授权访问图片库";
+
