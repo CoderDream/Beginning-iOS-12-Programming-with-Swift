@@ -11,7 +11,7 @@ import CoreData
 import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
 
@@ -36,6 +36,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("User notification are not allowed.")
             }
         }
+        
+        
+        //UNUserNotificationCenter.current().delegate = self
         
         return true
     }

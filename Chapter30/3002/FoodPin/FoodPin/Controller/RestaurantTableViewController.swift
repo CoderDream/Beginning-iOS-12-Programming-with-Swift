@@ -80,6 +80,9 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         tableView.tableHeaderView = searchController.searchBar
         
         self.definesPresentationContext = true
+        
+        // Prepare for notifications
+        prepareNotification()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -306,6 +309,8 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     // MARK: - User Notifications
     
     func prepareNotification() {
+        
+        print("prepareNotification")
        
         // Create the user notification
         let content = UNMutableNotificationContent()
@@ -314,11 +319,22 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         content.subtitle = "Try new food today"
         content.body = "I recommend you to check out Cafe Deadend"
         content.sound = UNNotificationSound.default
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
-        let request = UNNotificationRequest(identifier: "foodpin.restaurantSuggestion", content: content, trigger: trigger)
+        // 设置请求标识符
+        let requestIdentifier = "foodpin.restaurantSuggestion"
+        // 设置通知触发器
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 30, repeats: false)
+        // 设置一个通知请求
+        let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
         
         // Schedule the notification
-        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)        
+        // UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)       
+
+        
+        // 将通知请求添加到发送中心
+        UNUserNotificationCenter.current().add(request) { error in
+            if error == nil {
+                print("Time Interval Notification scheduled: \(requestIdentifier)")
+            }
+        }
     }
 }
