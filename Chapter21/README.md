@@ -345,76 +345,77 @@ viewDidAppear()方法在进入【walkthrough view controller】时会自动调�
 ```
 直接 dismiss 当前的视图控制器
 
-2. 实现 NEXT 按钮的方法：
+2. 实现 NEXT 按钮的方法：  
+
 	1. 先在 WalkthroughPageViewController 添加新方法forwardPage()
-```swift
-func forwardPage() {
-	currentIndex += 1
-	if let nextViewController = contentViewController(at: currentIndex) {
-		setViewControllers([nextViewController], direction: .forward, animated: true, completion: nil)
+	```swift
+	func forwardPage() {
+		currentIndex += 1
+		if let nextViewController = contentViewController(at: currentIndex) {
+			setViewControllers([nextViewController], direction: .forward, animated: true, completion: nil)
+		}
 	}
-}
-```
-当这个方法被调用时，会自动创建下一个内容视图控制器，然后通过调用内置的setViewControllers方法展示下一个视图控制器。
+	```
+	当这个方法被调用时，会自动创建下一个内容视图控制器，然后通过调用内置的setViewControllers方法展示下一个视图控制器。
 
 	2. 接下来在 WalkthroughViewController 添加一个属性：
-```swift
-var walkthroughPageViewController: WalkthroughPageViewController?
-```
-这个属性存储对 WalkthroughPageViewController 对象的引用。
-后面我们将使用它来找到当前页的下标。
+	```swift
+	var walkthroughPageViewController: WalkthroughPageViewController?
+	```
+	这个属性存储对 WalkthroughPageViewController 对象的引用。
+	后面我们将使用它来找到当前页的下标。
 
 	3. 在 WalkthroughViewController 中添加prepare方法：
-```swift
-override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-	let destination = segue.destination
-	if let pageViewController = destination as? WalkthroughPageViewController {
-		walkthroughPageViewController = pageViewController
-		walkthroughPageViewController?.walkthroughDelegate = self
+	```swift
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		let destination = segue.destination
+		if let pageViewController = destination as? WalkthroughPageViewController {
+			walkthroughPageViewController = pageViewController
+			walkthroughPageViewController?.walkthroughDelegate = self
+		}
 	}
-}
-```
-这个方法用于调用【Walkthrough Page View Controller】中的容器视图。
+	```
+	这个方法用于调用【Walkthrough Page View Controller】中的容器视图。
 
 	4. 在 WalkthroughViewController 中添加 nextButtonTapped action方法
-```swift
-@IBAction func nextButtonTapped(sender: UIButton) {
-	if let index = walkthroughPageViewController?.currentIndex {
-		switch index {
-		case 0...1:
-			walkthroughPageViewController?.forwardPage()
-		case 2:
-			dismiss(animated: true, completion: nil)
-		default: break
-		}
-	}
-	
-	updateUI()
-}
-```
-如果有下一页，就继续翻页，如果没有，去掉当前视图。最后更新UI。
-
-```swift
-func updateUI() {
-	
-	if let index = walkthroughPageViewController?.currentIndex {
-		switch index {
-		case 0...1:
-			nextButton.setTitle("NEXT", for: .normal)
-			skipButton.isHidden = false
-		case 2:
-			nextButton.setTitle("GET STARTED", for: .normal)
-			skipButton.isHidden = true			
-		default: break
+	```swift
+	@IBAction func nextButtonTapped(sender: UIButton) {
+		if let index = walkthroughPageViewController?.currentIndex {
+			switch index {
+			case 0...1:
+				walkthroughPageViewController?.forwardPage()
+			case 2:
+				dismiss(animated: true, completion: nil)
+			default: break
+			}
 		}
 		
-		pageControl.currentPage = index
-	}        
-}
-```
-updateUI方法做了两件事，首先根据下标，设置NEXT按钮的title及Skip按钮是否隐藏，其次设置页面指示器的当前值的属性。
+		updateUI()
+	}
+	```
+	如果有下一页，就继续翻页，如果没有，去掉当前视图。最后更新UI。
 
-![](snapshot/2121.jpg)   
+	```swift
+	func updateUI() {
+		
+		if let index = walkthroughPageViewController?.currentIndex {
+			switch index {
+			case 0...1:
+				nextButton.setTitle("NEXT", for: .normal)
+				skipButton.isHidden = false
+			case 2:
+				nextButton.setTitle("GET STARTED", for: .normal)
+				skipButton.isHidden = true			
+			default: break
+			}
+			
+			pageControl.currentPage = index
+		}        
+	}
+	```
+	updateUI方法做了两件事，首先根据下标，设置NEXT按钮的title及Skip按钮是否隐藏，其次设置页面指示器的当前值的属性。
+
+	![](snapshot/2121.jpg)   
 
 3. 建立 UI 控件的链接：选择【Walkthrough View Controller】，点击
 
