@@ -60,45 +60,47 @@ The UIPageViewController class is a highly configurable class. You're allowed to
 5. 接下来设计视图的下半部分。首先拖拽一个【View】对象到视图控制器，设置位置和大小（X：0，Y：450，Width：375，Heigh：217），接下来给【View】添加4个约束，上下左右都为0，记得不要勾选【Contrain to margins】：  
 ![](snapshot/2109.jpg)  
 
-这样设置约束后，Xcode会发现有布局错误。原因是我们没有给视图定义高度约束。这里我们希望让【Container View】占据三分之二的高度。下面我们来实现它。
+这样设置约束后，Xcode会发现有布局错误。原因是我们没有给视图定义高度约束。这里我们希望让【Container View】占据三分之二的高度。下面我们来实现它。  
+
 	1. 首先，在【document outline】选择【View】对象，然后把它拖拽到【Safe Area】上，然后在弹出的对话框中选择【Equal Heights】。This defines a height constraint for the view,saying that its height should equal the height of the safe area.
-	![](snapshot/2110.jpg)
+	![](snapshot/2110.jpg)  
+
 	2. 接下来，设置【Container View】的高度约束，打开【Size inspector】，设置【multipler from 1 to 1:3】。
 	![](snapshot/2111.jpg)
 
-6. 接着，我们添加按钮和页面指示器到空的View中。
-拖拽一个按钮到视图中，设置属性：
-	- width: 190
-	- height: 50
-	- title: NEXT
-	- font:　Subhead - Text style
-	- font color: white
-	- background color: red (#E74C3C)
-
-第二个按钮，在NEXT按钮正下方：
-	- title: Skip
-	- font: Body - Text style
-	- font color: dark gray
-
-再拖拽一个【page control】对象到NEXT按钮的正上方
-	- tint color: light gray(#EFEFF4)
-	- current page color: red(#E74C3C)
+6. 接着，我们添加按钮和页面指示器到空的View中。  
+	1. 拖拽一个按钮到视图中，设置属性：
+		- width: 190
+		- height: 50
+		- title: NEXT
+		- font:　Subhead - Text style
+		- font color: white
+		- background color: red (#E74C3C)  
+		
+	2. 第二个按钮，在NEXT按钮正下方：  
+		- title: Skip
+		- font: Body - Text style
+		- font color: dark gray
+	
+	3. 再拖拽一个【page control】对象到NEXT按钮的正上方:  
+		- tint color: light gray(#EFEFF4)
+		- current page color: red(#E74C3C)
 
 
 ![](snapshot/2112.jpg)　　
 
 7. 添加约束
 
-NEXT 按钮：　　
-- width: 190
-- height: 50	
+	NEXT 按钮：　　
+	- width: 190
+	- height: 50	
 
 8. 整合成StackView　　
 
-同时选择page control、 NEXT按钮和Skip按钮，然后点击【Embed】按钮，选择【StackView】，这样3个控件形成垂直方向的StackView。然后设置属性 【spacing】 为 20。最后添加两个约束　　
-
-- Horizontally in Container: 0
-- Vertically in Containe: 0
+	同时选择page control、 NEXT按钮和Skip按钮，然后点击【Embed】按钮，选择【StackView】，这样3个控件形成垂直方向的StackView。然后设置属性 【spacing】 为 20。最后添加两个约束　　
+	
+	- Horizontally in Container: 0
+	- Vertically in Containe: 0
 
 ![](snapshot/2113.jpg)
 
