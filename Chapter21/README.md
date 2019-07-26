@@ -555,3 +555,6 @@ override func viewDidAppear(_ animated: Bool) {
 
 ## Summary 小结
 
+1. UIPageViewController的使用
+2. container view 的使用
+3. UserDefaults 的使用
