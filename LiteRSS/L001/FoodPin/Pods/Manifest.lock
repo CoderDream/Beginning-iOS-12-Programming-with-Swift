@@ -1,0 +1,35 @@
+PODS:
+  - Alamofire (4.8.2)
+  - AlamofireXmlToObjects (2.1.0):
+    - Alamofire
+    - EVReflection
+    - XMLDictionary
+  - EVReflection (5.10.1):
+    - EVReflection/Core (= 5.10.1)
+  - EVReflection/Core (5.10.1)
+  - SWXMLHash (4.8.0)
+  - XMLDictionary (1.4.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.8.1)
+  - AlamofireXmlToObjects (~> 2.1.0)
+  - SWXMLHash (~> 4.8.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireXmlToObjects
+    - EVReflection
+    - SWXMLHash
+    - XMLDictionary
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  AlamofireXmlToObjects: 3614c4945a5b154041ea9ade99644b5de66d5857
+  EVReflection: 8124de482178d34ccd56473e16cd95990f9a1113
+  SWXMLHash: 6d0ab74fef35f99156945c8bfe86dd7ead0822aa
+  XMLDictionary: fa07b6ff422b3a91d47a5de9bc82e3fc04fbd167
+
+PODFILE CHECKSUM: dca30b27f453a53dfbab32263132e805c03f024e
+
+COCOAPODS: 1.6.1

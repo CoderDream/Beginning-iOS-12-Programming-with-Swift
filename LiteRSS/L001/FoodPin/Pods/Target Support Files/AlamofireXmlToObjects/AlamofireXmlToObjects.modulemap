@@ -1,0 +1,6 @@
+framework module AlamofireXmlToObjects {
+  umbrella header "AlamofireXmlToObjects-umbrella.h"
+
+  export *
+  module * { export * }
+}
