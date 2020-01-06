@@ -39,6 +39,7 @@
 		3F69268C22BA2D7100C93BF9 /* RestaurantDetailMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F69268B22BA2D7100C93BF9 /* RestaurantDetailMapCell.swift */; };
 		3FCD6F7E22B928C900433B5C /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCD6F7D22B928C900433B5C /* UIColor+Ext.swift */; };
 		3FCD6F8022B92BA200433B5C /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCD6F7F22B92BA200433B5C /* UINavigationController+Ext.swift */; };
+		3FE083DD23C36B2000D87A63 /* ItemVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE083DC23C36B2000D87A63 /* ItemVO.swift */; };
 		3FFEC2DB22BE77740089ACD2 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFEC2DA22BE77740089ACD2 /* RoundedTextField.swift */; };
 		A362EC46F1B06834D314802D /* Pods_FoodPin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0CDAEE69FF93402D65CC6F8 /* Pods_FoodPin.framework */; };
 		F44705AE211AF99E002E0327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44705AD211AF99E002E0327 /* AppDelegate.swift */; };
@@ -87,6 +88,7 @@
 		3F69268B22BA2D7100C93BF9 /* RestaurantDetailMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailMapCell.swift; sourceTree = "<group>"; };
 		3FCD6F7D22B928C900433B5C /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		3FCD6F7F22B92BA200433B5C /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
+		3FE083DC23C36B2000D87A63 /* ItemVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemVO.swift; sourceTree = "<group>"; };
 		3FFEC2DA22BE77740089ACD2 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		63085D4986D2117D984C683B /* Pods-FoodPin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodPin.release.xcconfig"; path = "Target Support Files/Pods-FoodPin/Pods-FoodPin.release.xcconfig"; sourceTree = "<group>"; };
 		B0CDAEE69FF93402D65CC6F8 /* Pods_FoodPin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodPin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,7 +167,6 @@
 				BC9B33D46579680CF36BEB8E /* Pods-FoodPin.debug.xcconfig */,
 				63085D4986D2117D984C683B /* Pods-FoodPin.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -239,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				F481ACB12123383100B6DC2F /* Restaurant.swift */,
+				3FE083DC23C36B2000D87A63 /* ItemVO.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -412,6 +414,7 @@
 				3F44FE1A22BB755C00736B9E /* ReviewViewController.swift in Sources */,
 				3F69268C22BA2D7100C93BF9 /* RestaurantDetailMapCell.swift in Sources */,
 				3F69268522B8894800C93BF9 /* RestaurantDetailTextCell.swift in Sources */,
+				3FE083DD23C36B2000D87A63 /* ItemVO.swift in Sources */,
 				F44705C0211AFFE1002E0327 /* RestaurantTableViewController.swift in Sources */,
 				F463DF78211D35A600F73F88 /* RestaurantTableViewCell.swift in Sources */,
 				3F43C0A122BF97A600968170 /* FoodPin.xcdatamodeld in Sources */,

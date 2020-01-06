@@ -10,7 +10,63 @@ import UIKit
 import CoreData
 import UserNotifications
 
-class RestaurantTableViewController: UITableViewController, NSFetchedResultsControllerDelegate, UISearchResultsUpdating {
+import Alamofire
+import SWXMLHash
+import AlamofireXmlToObjects
+import EVReflection
+
+class CnbetaResponse: EVObject {
+    var rss: Rss?
+}
+
+class Rss: EVObject {
+    var __name: String?
+    var _version: String?
+    var channel: Channel?
+}
+
+class Channel: EVObject {
+    var title: String?
+    var link: String?
+    var language: String?
+    var copyright: String?
+    var image: EVImage? = nil
+    var item: [Item] = [Item]()
+    
+    var descriptions: String?
+    var generator: String?
+    var pubDate: String?
+    
+    // 关键字别名，例如 description 是系统的关键字，那我们用别名 descriptions 代替
+    override internal func propertyMapping() -> [(keyInObject: String?, keyInResource: String?)] {
+        return [("descriptions", "description")]
+    }
+}
+
+class EVImage: EVObject {
+    var url: String?
+    var title: String?
+    var link: String?
+}
+
+class Item: EVObject {
+    var title: String?
+    var link: String?
+    var descriptions: String?
+    var author: String?
+    var source: String?
+    var pubDate: String?
+    var guid: String?
+    
+    // 关键字别名，例如 description 是系统的关键字，那我们用别名 descriptions 代替
+    override internal func propertyMapping() -> [(keyInObject: String?, keyInResource: String?)] {
+        return [("descriptions", "description")]
+    }
+}
+
+class RestaurantTableViewController: UITableViewController, NSFetchedResultsControllerDelegate, UISearchResultsUpdating, XMLParserDelegate {
+    
+    
 
     // Cafe Deadend, G/F, 72 Po Hing Fong, Sheung Wan, Hong Kong
     // Homei Shop B, G/F, 22-24A Tai Ping San Street SOHO, Sheung Wan, Hong Kong
@@ -28,6 +84,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("RestaurantTableViewController viewDidLoad")
 
         tableView.cellLayoutMarginsFollowReadableWidth = true
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -96,6 +153,19 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         
         // Handing the Actions
         prepareNotificationV5()
+        
+        test2()
+    }
+    
+    func test2() {
+        
+        let URL = "https://www.cnbeta.com/backend.php"
+        Alamofire.request(URL).responseObject { (response: DataResponse<Rss>) in
+            if let result = response.value {
+                // That was all... You now have a WeatherResponse object with data
+                print(result)
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

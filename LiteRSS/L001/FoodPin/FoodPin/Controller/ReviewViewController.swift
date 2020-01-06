@@ -18,6 +18,7 @@ class ReviewViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("ReviewViewController")
 
         // Do any additional setup after loading the view.
         if let restaurantImage  = restaurant.image {
