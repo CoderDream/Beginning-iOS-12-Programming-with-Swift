@@ -180,6 +180,11 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
                         //restaurant.type = item.descriptions
                         print(item.description)
                         print("============================")
+                        var desc: String = item.descriptions ?? ""
+                        let range: Range = desc.range(of: "strong")
+                        print("index: \(indexStrong)")
+//                        desc.replaceSubrange("", with: Collection)
+                        
                         print(item.descriptions)
                         //restaurant.location = addressTextField.text
 //                        restaurant.phone = phoneTextField.text
