@@ -80,6 +80,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     // 查找结果
     var searchResults: [RestaurantMO] = []
     
+    
     // MARK: - View controller life cycle
     
     override func viewDidLoad() {
@@ -104,6 +105,8 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         
         // Fetch data from data store
         let fetchRequest: NSFetchRequest<RestaurantMO> = RestaurantMO.fetchRequest()
+        
+       // let fetchRequest: NSFetchRequest<CnbetaItemMO> = CnbetaItemMO.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         
@@ -152,7 +155,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         // prepareNotificationV4()
         
         // Handing the Actions
-        prepareNotificationV5()
+        //prepareNotificationV5()
         
         test2()
     }
@@ -161,9 +164,36 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         
         let URL = "https://www.cnbeta.com/backend.php"
         Alamofire.request(URL).responseObject { (response: DataResponse<Rss>) in
-            if let result = response.value {
+            if let rss = response.value {
                 // That was all... You now have a WeatherResponse object with data
-                print(result)
+                //print(rss)
+                let items = rss.channel?.item
+                //print(items.size())
+                
+                var restaurant: RestaurantMO!
+                for (i, item) in (items?.enumerated())! {
+                    print("arr[\(i)] = \(item)")
+                    if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+                        restaurant = RestaurantMO(context: appDelegate.persistentContainer.viewContext)
+                        
+                        restaurant.name = item.title
+                        //restaurant.type = item.descriptions
+                        print(item.description)
+                        print("============================")
+                        print(item.descriptions)
+                        //restaurant.location = addressTextField.text
+//                        restaurant.phone = phoneTextField.text
+//                        restaurant.summary = summaryTextView.text
+//                        restaurant.isVisited = false
+//
+//                        if let restaurantImage = photoImageView.image {
+//                            restaurant.image = restaurantImage.pngData()
+//                        }
+                        
+                        print("Saving data to context ...")
+                        appDelegate.saveContext()
+                    }
+                }
             }
         }
     }
