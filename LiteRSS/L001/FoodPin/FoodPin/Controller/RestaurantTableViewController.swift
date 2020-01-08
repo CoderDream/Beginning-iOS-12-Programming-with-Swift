@@ -181,8 +181,8 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
                         print(item.description)
                         print("============================")
                         var desc: String = item.descriptions ?? ""
-                        let range: Range = desc.range(of: "strong")
-                        print("index: \(indexStrong)")
+                        //let range: Range = desc.range(of: "strong")
+                        //print("index: \(indexStrong)")
 //                        desc.replaceSubrange("", with: Collection)
                         
                         print(item.descriptions)
@@ -194,14 +194,151 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
 //                        if let restaurantImage = photoImageView.image {
 //                            restaurant.image = restaurantImage.pngData()
 //                        }
-                        
+                       
                         print("Saving data to context ...")
                         appDelegate.saveContext()
                     }
                 }
+                // self.stringTest()
+                self.filterContentTest()
             }
         }
     }
+    
+    func stringTest() {
+        let str: String = "一二三四五六七八九十1234567890"
+        
+        let subStr_prefix_maxLength = str.prefix(5)
+        print("subStr_prefix_maxLength: \(subStr_prefix_maxLength)")
+        // “一二三四五” 截取 正数 maxLength 位
+        
+        let subStr_prefix_upTo = str.prefix(upTo: str.firstIndex(of: "6")!)
+        print("subStr_prefix_upTo: \(subStr_prefix_upTo)")
+        // 一二三四五六七八九十12345
+        
+        let subStr_prefix_through = str.prefix(through: str.firstIndex(of: "2")!)
+        print("subStr_prefix_through: \(subStr_prefix_through)")
+        // 一二三四五六七八九十12
+        
+        let key = "五"
+        let range1 = str.range(of: key)
+        let subStr_prefix_upTo2_lower = str.prefix(upTo: (range1?.lowerBound)!)
+        print("subStr_prefix_upTo2_lower: \(subStr_prefix_upTo2_lower)")
+        // 一二三四
+        
+        let subStr_prefix_upTo2_upper = str.prefix(upTo: (range1?.upperBound)!)
+        print("subStr_prefix_upTo2_upper: \(subStr_prefix_upTo2_upper)")
+        // 一二三四五
+        
+        let subStr_prefix_through2_lower = str.prefix(through: (range1?.lowerBound)!)
+        print("subStr_prefix_through2_lower: \(subStr_prefix_through2_lower)")
+        // 一二三四五
+        
+        let subStr_prefix_through_upper = str.prefix(through: (range1?.upperBound)!)
+        print("subStr_prefix_through_upper: \(subStr_prefix_through_upper)")
+        // 一二三四五六
+        
+        // suffix
+        let subStr_suffix_maxLength = str.suffix(6)
+        print("subStr_suffix_maxLength: \(subStr_suffix_maxLength)")
+        // 567890 截取 倒数 maxLength 位
+        
+        let subStr_suffix_from = str.suffix(from: str.firstIndex(of: "5")!)
+        print("subStr_suffix_from: \(subStr_suffix_from)")
+        // 567890 从 String.Index 开始，包含到结束
+    }
+    
+    func findStringTest() {
+        let str: String = "我最爱北京天安门！"
+        let range: Range = str.range(of: "北京")!
+        let location: Int = str.distance(from: str.startIndex, to: range.lowerBound)
+        /* location = 3 */
+        
+        let keyLength: Int = str.distance(from: range.lowerBound, to: range.upperBound)
+        // let key = "北京"; let keyLength = key.count;  //count = 2
+        /* keyLength = 2 */
+        
+        print("location = \(location), length = \(keyLength)")
+        /* location = 3, length = 2 */
+        
+        // SubString
+        let frontStr: Substring = str[str.startIndex ..< range.lowerBound]
+        print("frontSubStr = \(frontStr)")
+        /* 我最爱 */
+        
+        let frontStr2: Substring = str[str.startIndex ... range.lowerBound]
+        print("frontSubStr2 = \(frontStr2)")
+        /* 我最爱北 */
+        
+        
+        // MARK: 下面这几个方法，可以自己试一下
+        /*
+         func index(after: String.Index)
+         Returns the position immediately after the given index.
+         
+         func formIndex(after: inout String.Index)
+         Replaces the given index with its successor.
+         
+         
+         func index(before: String.Index)
+         Returns the position immediately before the given index.
+         
+         func formIndex(before: inout String.Index)
+         Replaces the given index with its predecessor.
+         */
+        let frontTest_before: Substring = str[str.startIndex ..< str.index(before: range.lowerBound)]
+        let frontTest_after: Substring = str[str.startIndex ..< str.index(after: range.lowerBound)]
+        print("before = \(frontTest_before), after = \(frontTest_after)")
+        /* before = 我最, after = 我最爱北 */
+    }
+    
+    func filterContentTest() -> String {
+        let str = "<p><strong>美国有线电视新闻网（CNN）发表文章称，今年国际消费电子展（CES）最热门的产品可能是“隐私”。<\\/strong>本周，在拉斯维加斯举行的这场备受关注的行业展会上，参展的几家大型科技公司都特别强调了用户隐私问题。原因是，近几年来，各国监管机构和消费者对高科技行业处理个人数据的方式进行了越来越严格的审查。</p> <a href=\"https:\\/\\/www.cnbeta.com\\articles\\tech\\930109.htm\" target=\"_blank\"><strong>阅读全文<\\/strong><\\/a>"
+        
+        //let str: String = "我最爱北京天安门！"
+        let range: Range = str.range(of: "<a ")!
+        let location: Int = str.distance(from: str.startIndex, to: range.lowerBound)
+        /* location = 3 */
+        
+        let keyLength: Int = str.distance(from: range.lowerBound, to: range.upperBound)
+        // let key = "北京"; let keyLength = key.count;  //count = 2
+        /* keyLength = 2 */
+        
+        print("location = \(location), length = \(keyLength)")
+        /* location = 3, length = 2 */
+        
+        // SubString
+        let frontStr: Substring = str[str.startIndex ..< range.lowerBound]
+        print("frontSubStr = \(frontStr)")
+        /* 我最爱 */
+        
+        let frontStr2: Substring = str[str.startIndex ... range.lowerBound]
+        print("frontSubStr2 = \(frontStr2)")
+        /* 我最爱北 */
+        
+        
+        // MARK: 下面这几个方法，可以自己试一下
+        /*
+         func index(after: String.Index)
+         Returns the position immediately after the given index.
+         
+         func formIndex(after: inout String.Index)
+         Replaces the given index with its successor.
+         
+         
+         func index(before: String.Index)
+         Returns the position immediately before the given index.
+         
+         func formIndex(before: inout String.Index)
+         Replaces the given index with its predecessor.
+         */
+        let frontTest_before: Substring = str[str.startIndex ..< str.index(before: range.lowerBound)]
+        let frontTest_after: Substring = str[str.startIndex ..< str.index(after: range.lowerBound)]
+        print("before = \(frontTest_before), after = \(frontTest_after)")
+        /* before = 我最, after = 我最爱北 */
+        return ""
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
