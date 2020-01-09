@@ -156,12 +156,11 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         
         // Handing the Actions
         //prepareNotificationV5()
-        
+        deleteAllRestaurantMO()
         test2()
     }
     
     func test2() {
-        
         let URL = "https://www.cnbeta.com/backend.php"
         Alamofire.request(URL).responseObject { (response: DataResponse<Rss>) in
             if let rss = response.value {
@@ -178,14 +177,14 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
                         
                         restaurant.name = item.title
                         //restaurant.type = item.descriptions
-                        print(item.description)
-                        print("============================")
-                        var desc: String = item.descriptions ?? ""
+                        //print(item.description)
+                        //print("============================")
+                        //var desc: String = item.descriptions ?? ""
                         //let range: Range = desc.range(of: "strong")
                         //print("index: \(indexStrong)")
 //                        desc.replaceSubrange("", with: Collection)
-                        
-                        print(item.descriptions)
+                        restaurant.location = self.filterContentTest(str: item.descriptions!)
+                        //print(item.descriptions)
                         //restaurant.location = addressTextField.text
 //                        restaurant.phone = phoneTextField.text
 //                        restaurant.summary = summaryTextView.text
@@ -200,7 +199,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
                     }
                 }
                 // self.stringTest()
-                self.filterContentTest()
+                //self.filterContentTest()
             }
         }
     }
@@ -292,19 +291,27 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         /* before = 我最, after = 我最爱北 */
     }
     
-    func filterContentTest() -> String {
-        let str = "<p><strong>美国有线电视新闻网（CNN）发表文章称，今年国际消费电子展（CES）最热门的产品可能是“隐私”。<\\/strong>本周，在拉斯维加斯举行的这场备受关注的行业展会上，参展的几家大型科技公司都特别强调了用户隐私问题。原因是，近几年来，各国监管机构和消费者对高科技行业处理个人数据的方式进行了越来越严格的审查。</p> <a href=\"https:\\/\\/www.cnbeta.com\\articles\\tech\\930109.htm\" target=\"_blank\"><strong>阅读全文<\\/strong><\\/a>"
+    func filterContentTest(str: String) -> String {
+        //let str = "<p><strong>美国有线电视新闻网（CNN）发表文章称，今年国际消费电子展（CES）最热门的产品可能是“隐私”。<\\/strong>本周，在拉斯维加斯举行的这场备受关注的行业展会上，参展的几家大型科技公司都特别强调了用户隐私问题。原因是，近几年来，各国监管机构和消费者对高科技行业处理个人数据的方式进行了越来越严格的审查。</p> <a href=\"https:\\/\\/www.cnbeta.com\\articles\\tech\\930109.htm\" target=\"_blank\"><strong>阅读全文<\\/strong><\\/a>"
         
         //let str: String = "我最爱北京天安门！"
-        let range: Range = str.range(of: "<a ")!
-        let location: Int = str.distance(from: str.startIndex, to: range.lowerBound)
+        guard let range: Range = str.range(of: "<a ") else {
+            var result = str.replacingOccurrences(of: "<p>", with: "")
+            result = result.replacingOccurrences(of: "</p>", with: "")
+            result = result.replacingOccurrences(of: "<strong>", with: "")
+            result = result.replacingOccurrences(of: "</strong>", with: "")
+            result = result.replacingOccurrences(of: "<\\/strong>", with: "")
+            return result
+        }
+        //let location: Int = str.distance(from: str.startIndex, to: range.lowerBound)
+        
         /* location = 3 */
         
-        let keyLength: Int = str.distance(from: range.lowerBound, to: range.upperBound)
+        //let keyLength: Int = str.distance(from: range.lowerBound, to: range.upperBound)
         // let key = "北京"; let keyLength = key.count;  //count = 2
         /* keyLength = 2 */
         
-        print("location = \(location), length = \(keyLength)")
+        //print("location = \(location), length = \(keyLength)")
         /* location = 3, length = 2 */
         
         // SubString
@@ -312,8 +319,14 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         print("frontSubStr = \(frontStr)")
         /* 我最爱 */
         
-        let frontStr2: Substring = str[str.startIndex ... range.lowerBound]
-        print("frontSubStr2 = \(frontStr2)")
+        var result = frontStr.replacingOccurrences(of: "<p>", with: "")
+        result = result.replacingOccurrences(of: "</p>", with: "")
+        result = result.replacingOccurrences(of: "<strong>", with: "")
+        result = result.replacingOccurrences(of: "<\\/strong>", with: "")
+        result = result.replacingOccurrences(of: "</strong>", with: "")
+        
+        //let frontStr2: Substring = str[str.startIndex ... range.lowerBound]
+        //print("frontSubStr2 = \(frontStr2)")
         /* 我最爱北 */
         
         
@@ -332,13 +345,57 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
          func formIndex(before: inout String.Index)
          Replaces the given index with its predecessor.
          */
-        let frontTest_before: Substring = str[str.startIndex ..< str.index(before: range.lowerBound)]
-        let frontTest_after: Substring = str[str.startIndex ..< str.index(after: range.lowerBound)]
-        print("before = \(frontTest_before), after = \(frontTest_after)")
+//        let frontTest_before: Substring = str[str.startIndex ..< str.index(before: range.lowerBound)]
+//        let frontTest_after: Substring = str[str.startIndex ..< str.index(after: range.lowerBound)]
+//        print("before = \(frontTest_before), after = \(frontTest_after)")
         /* before = 我最, after = 我最爱北 */
-        return ""
+        print("result = \(result)")
+        return result
     }
     
+    //MARK:    获取上下文对象
+    
+    func getContext() -> NSManagedObjectContext{
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        return appDelegate.persistentContainer.viewContext
+    }
+    
+    //MARK:    删除 RestaurantMO
+    func deleteAllRestaurantMO() -> Void {
+        
+        //获取委托
+        let app = UIApplication.shared.delegate as! AppDelegate
+        
+        //获取数据上下文对象
+        let context = getContext()
+        
+        //声明数据的请求，声明一个实体结构
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "RestaurantMO")
+        
+        
+        // 异步请求由两部分组成：普通的request和completion handler
+        
+        // 返回结果在finalResult中
+        let asyncFetchRequest = NSAsynchronousFetchRequest(fetchRequest: fetchRequest) { (result:NSAsynchronousFetchResult) in
+            
+            //对返回的数据做处理。
+            let fetchObject = result.finalResult! as! [RestaurantMO]
+            
+            for c in fetchObject{
+                //所有删除信息
+                context.delete(c)
+            }
+            
+            app.saveContext()
+        }
+        
+        // 执行异步请求调用execute
+        do {
+            try context.execute(asyncFetchRequest)
+        } catch  {
+            print("error")
+        }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
